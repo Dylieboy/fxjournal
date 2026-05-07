@@ -2,6 +2,9 @@
   "name": "fx-journal",
   "version": "0.1.0",
   "private": true,
+  "description": "Professional forex trading journal with risk management and analytics",
+  "author": "FX Journal",
+  "homepage": "https://fxjournal.vercel.app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
