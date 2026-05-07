@@ -346,6 +346,19 @@ button {
   margin: 0;
 }
 
+.panel-copy.motivational {
+  color: var(--accent);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.panel-copy.stats {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
 .metrics {
   display: grid;
   gap: 14px;
@@ -520,38 +533,44 @@ button {
 
 .trade-list {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .trade-card {
-  padding: 16px;
+  padding: 10px 12px;
 }
 
 .trade-head {
-  align-items: start;
+  align-items: center;
   display: flex;
-  gap: 12px;
+  gap: 8px;
   justify-content: space-between;
 }
 
 .trade-title h3 {
-  font-size: 19px;
-  margin: 0 0 5px;
+  font-size: 16px;
+  margin: 0 0 2px;
 }
 
 .trade-title p,
 .trade-notes {
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
+  font-size: 13px;
+}
+
+.trade-notes {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
 }
 
 .pill {
   border-radius: 999px;
   display: inline-flex;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
-  padding: 7px 11px;
+  padding: 4px 8px;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -573,21 +592,27 @@ button {
 
 .trade-stats {
   display: grid;
-  gap: 10px;
+  gap: 6px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 .trade-stat {
   background: rgba(5, 14, 16, 0.46);
   border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.trade-stat span {
+  font-size: 11px;
 }
 
 .trade-stat strong {
   display: block;
-  margin-top: 6px;
+  margin-top: 3px;
+  font-size: 13px;
 }
 
 .empty {

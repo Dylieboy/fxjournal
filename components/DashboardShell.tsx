@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { signOutAction } from "@/app/actions";
 import { formatMoney } from "@/lib/analytics";
+import { useEffect } from "react";
 
 type DashboardShellProps = {
   children: React.ReactNode;
@@ -23,6 +26,18 @@ export function DashboardShell({
   userName,
   winRate,
 }: DashboardShellProps) {
+  useEffect(() => {
+    const details = document.querySelector(".mobile-menu") as HTMLDetailsElement;
+    if (!details) return;
+
+    const links = details.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        details.open = false;
+      });
+    });
+  }, []);
+
   return (
     <main className="terminal-shell">
       <div className="market-bg" aria-hidden="true">

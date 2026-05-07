@@ -51,18 +51,6 @@ export default async function OverviewPage() {
 
       <div className="overview-grid">
         <section className="panel glass-panel">
-          <h2>Market Pulse</h2>
-          <div className="ticker-strip">
-            {["XAUUSD", "EURUSD", "GBPJPY", "US30"].map((symbol, index) => (
-              <div className="ticker" key={symbol}>
-                <span>{symbol}</span>
-                <strong>{index % 2 === 0 ? "+0." : "-0."}{index + 24}%</strong>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="panel glass-panel">
           <h2>Recent Trades</h2>
           <div className="mini-list">
             {recentTrades.length ? (

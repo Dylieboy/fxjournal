@@ -23,10 +23,6 @@ export default async function SignUpPage() {
 
         <section className="auth-panel">
           <h2>Create account</h2>
-          <p>
-            Locally this uses a small file database. On Vercel it will use Neon once
-            `DATABASE_URL` is added.
-          </p>
           <AuthForm mode="signup" action={signUpAction} />
           <div className="link-row">
             Already have an account? <Link href="/signin">Sign in</Link>

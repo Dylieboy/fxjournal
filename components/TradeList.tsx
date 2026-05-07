@@ -55,7 +55,7 @@ export function TradeList({ trades }: TradeListProps) {
             {trade.notes ? <p className="trade-notes">{trade.notes}</p> : null}
             {trade.lesson ? (
               <p className="trade-notes">
-                <strong>Lesson:</strong> {trade.lesson}
+                <strong>📚 Lesson:</strong> {trade.lesson}
               </p>
             ) : null}
 
