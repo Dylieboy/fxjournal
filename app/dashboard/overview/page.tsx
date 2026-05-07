@@ -54,12 +54,30 @@ export default async function OverviewPage() {
           <h2>Recent Trades</h2>
           <div className="mini-list">
             {recentTrades.length ? (
-              recentTrades.map((trade) => (
-                <Link href="/dashboard/journal" key={trade.id}>
-                  <span>{trade.symbol}</span>
-                  <strong>{formatMoney(Number.parseFloat(trade.profit_loss), trade.account_currency)}</strong>
-                </Link>
-              ))
+              recentTrades.map((trade) => {
+                const profitLoss = Number.parseFloat(trade.profit_loss);
+                const getColorClass = (outcome: string) => {
+                  switch (outcome) {
+                    case "win":
+                      return "text-green";
+                    case "loss":
+                      return "text-red";
+                    case "breakeven":
+                      return "text-white";
+                    default:
+                      return "";
+                  }
+                };
+
+                return (
+                  <Link href="/dashboard/journal" key={trade.id}>
+                    <span>{trade.symbol}</span>
+                    <strong className={getColorClass(trade.outcome)}>
+                      {formatMoney(profitLoss, trade.account_currency)}
+                    </strong>
+                  </Link>
+                );
+              })
             ) : (
               <p className="panel-copy">No trades yet. Add one to start seeing your journal history.</p>
             )}

@@ -16,6 +16,11 @@
   --inner: inset 0 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
 }
 
+/* Utility classes for trade outcome colors */
+.text-green { color: var(--accent); }
+.text-red { color: var(--danger); }
+.text-white { color: var(--text); }
+
 * {
   box-sizing: border-box;
 }
